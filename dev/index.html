@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>minoU-amine — développeur</title>
+<meta name="description" content="Page personnelle de minoU-amine — projets et dépôts, générés depuis GitHub.">
+<meta property="og:title" content="minoU-amine — développeur">
+<meta property="og:description" content="Page personnelle, projet par projet, mise à jour à chaque push.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232563EB'/><text x='50' y='68' font-size='52' font-family='Inter,sans-serif' font-weight='700' fill='white' text-anchor='middle'>m</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">m</span>
+    <span class="brand-text">minoU-amine</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work" data-fr="Projets" data-ar="المشاريع">Projets</a>
+    <a href="#about" data-fr="À propos" data-ar="نبذة">À propos</a>
+    <a class="gh" href="https://github.com/minoU-amine" target="_blank" rel="noopener">
+      <i data-lucide="github"></i><span>GitHub</span>
+    </a>
+    <button class="lang" id="langBtn" type="button" aria-label="Changer de langue">
+      <i data-lucide="languages"></i><span id="langLabel">ع</span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <p class="eyebrow">
+      <span class="dot"></span>
+      <span data-fr="Disponible pour de nouveaux projets" data-ar="متاح لمشاريع جديدة">Disponible pour de nouveaux projets</span>
+    </p>
+    <h1>
+      <span data-fr="Je construis des choses" data-ar="أبني أشياء">Je construis des choses</span><br>
+      <span class="accent" data-fr="pour le web." data-ar="على الويب.">pour le web.</span>
+    </h1>
+    <p class="lead" data-fr="Développeur. J'écris du code, je publie des idées, et cette page se met à jour toute seule depuis mon GitHub." data-ar="مطوّر. أكتب الشيفرة، أنشر الأفكار، وهذه الصفحة تُحدَّث تلقائياً من حساب GitHub الخاص بي.">
+      Développeur. J'écris du code, je publie des idées, et cette page se met à jour toute seule depuis mon GitHub.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="#work">
+        <i data-lucide="folder-git-2"></i>
+        <span data-fr="Voir les projets" data-ar="شاهد المشاريع">Voir les projets</span>
+      </a>
+      <a class="btn ghost" href="https://github.com/minoU-amine" target="_blank" rel="noopener">
+        <i data-lucide="arrow-up-right"></i>
+        <span data-fr="Mon profil GitHub" data-ar="ملفي على GitHub">Mon profil GitHub</span>
+      </a>
+    </div>
+    <dl class="stats" id="stats">
+      <div><dt data-fr="Dépôts publics" data-ar="مستودعات عامة">Dépôts publics</dt><dd id="statRepos">—</dd></div>
+      <div><dt data-fr="Langages" data-ar="اللغات">Langages</dt><dd id="statLangs">—</dd></div>
+      <div><dt data-fr="Dernière activité" data-ar="آخر نشاط">Dernière activité</dt><dd id="statUpdated">—</dd></div>
+    </dl>
+  </section>
+
+  <section class="work" id="work">
+    <div class="section-head">
+      <h2 data-fr="Projets" data-ar="المشاريع">Projets</h2>
+      <p data-fr="Récupérés en direct depuis l'API GitHub — rien à mettre à jour à la main." data-ar="تُجلب مباشرة من واجهة GitHub — لا حاجة لأي تحديث يدوي.">Récupérés en direct depuis l'API GitHub — rien à mettre à jour à la main.</p>
+    </div>
+    <div class="grid" id="repoGrid" aria-live="polite">
+      <article class="card skeleton"></article>
+      <article class="card skeleton"></article>
+      <article class="card skeleton"></article>
+    </div>
+    <p class="empty" id="emptyState" hidden>
+      <span data-fr="Aucun dépôt public pour l'instant. Le premier arrive bientôt." data-ar="لا توجد مستودعات عامة بعد. الأول قريباً.">Aucun dépôt public pour l'instant. Le premier arrive bientôt.</span>
+    </p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-copy">
+      <h2 data-fr="À propos" data-ar="نبذة">À propos</h2>
+      <p data-fr="Cette page est un site statique hébergé gratuitement sur GitHub Pages. Aucun serveur, aucune base de données : le navigateur lit l'API publique de GitHub et affiche les dépôts." data-ar="هذه الصفحة موقعٌ ثابت مستضاف مجاناً على GitHub Pages. لا خادم ولا قاعدة بيانات: المتصفح يقرأ واجهة GitHub العامة ويعرض المستودعات.">
+        Cette page est un site statique hébergé gratuitement sur GitHub Pages. Aucun serveur, aucune base de données : le navigateur lit l'API publique de GitHub et affiche les dépôts.
+      </p>
+      <p data-fr="Pour publier un nouveau projet, il suffit d'un <code>git push</code> : la page suit automatiquement." data-ar="لنشر مشروع جديد، يكفي <code>git push</code>: الصفحة تتحدّث تلقائياً.">
+        Pour publier un nouveau projet, il suffit d'un <code>git push</code> : la page suit automatiquement.
+      </p>
+    </div>
+    <ul class="pillars">
+      <li><i data-lucide="zap"></i><span data-fr="Statique, rapide, sans dépendances" data-ar="ثابت وسريع بلا اعتماديات">Statique, rapide, sans dépendances</span></li>
+      <li><i data-lucide="git-branch"></i><span data-fr="Déploiement continu à chaque push" data-ar="نشر مستمر عند كل دفعة">Déploiement continu à chaque push</span></li>
+      <li><i data-lucide="shield-check"></i><span data-fr="HTTPS fourni par GitHub" data-ar="HTTPS من GitHub">HTTPS fourni par GitHub</span></li>
+      <li><i data-lucide="languages"></i><span data-fr="Bilingue français / arabe" data-ar="بلغتين: الفرنسية والعربية">Bilingue français / arabe</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <p>© <span id="year">2026</span> minoU-amine</p>
+    <div class="foot-links">
+      <a href="https://github.com/minoU-amine" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a>
+      <a href="https://github.com/minoU-amine/minou-amine.github.io" target="_blank" rel="noopener"><i data-lucide="code-2"></i> <span data-fr="Code source" data-ar="الشيفرة المصدرية">Code source</span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="./assets/app.js"></script>
+</body>
+</html>

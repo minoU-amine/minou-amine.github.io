@@ -1,115 +1,505 @@
 <!doctype html>
-<html lang="fr" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>minoU-amine — développeur</title>
-<meta name="description" content="Page personnelle de minoU-amine — projets et dépôts, générés depuis GitHub.">
-<meta property="og:title" content="minoU-amine — développeur">
-<meta property="og:description" content="Page personnelle, projet par projet, mise à jour à chaque push.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/styles.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232563EB'/><text x='50' y='68' font-size='52' font-family='Inter,sans-serif' font-weight='700' fill='white' text-anchor='middle'>m</text></svg>">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amine Bechiri — Video Editor</title>
+<meta name="description" content="Amine Bechiri — video editor turning raw footage into videos people actually watch. Editing, colour grading, motion design and subtitles for brands, creators and companies in Algeria, Oman and beyond." />
+<meta property="og:title" content="Amine Bechiri — Video Editor" />
+<meta property="og:description" content="Editing, colour grading, motion design and subtitles. 600+ videos delivered." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://minou-amine.github.io/" />
+<meta property="og:site_name" content="Amine Bechiri" />
+<meta property="og:image" content="https://minou-amine.github.io/images/og-cover.jpg" />
+<meta property="og:image:secure_url" content="https://minou-amine.github.io/images/og-cover.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Amine Bechiri — Video editor" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ar_DZ" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Amine Bechiri — Video Editor" />
+<meta name="twitter:description" content="Editing, colour grading, motion design and subtitles. 600+ videos delivered." />
+<meta name="twitter:image" content="https://minou-amine.github.io/images/og-cover.jpg" />
+<meta name="theme-color" content="#0a0908" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
 
-<header class="nav">
-  <a class="brand" href="#top">
-    <span class="brand-mark">m</span>
-    <span class="brand-text">minoU-amine</span>
-  </a>
-  <nav class="nav-links">
-    <a href="#work" data-fr="Projets" data-ar="المشاريع">Projets</a>
-    <a href="#about" data-fr="À propos" data-ar="نبذة">À propos</a>
-    <a class="gh" href="https://github.com/minoU-amine" target="_blank" rel="noopener">
-      <i data-lucide="github"></i><span>GitHub</span>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="Amine Bechiri — home">
+      <span class="brand-text">
+        <strong data-en="Amine Bechiri" data-ar="أمين بشيري">Amine Bechiri</strong>
+        <em data-en="Video editor" data-ar="مونتير فيديو">Video editor</em>
+      </span>
     </a>
-    <button class="lang" id="langBtn" type="button" aria-label="Changer de langue">
-      <i data-lucide="languages"></i><span id="langLabel">ع</span>
-    </button>
-  </nav>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#work" data-en="Work" data-ar="الأعمال">Work</a>
+      <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="#packages" data-en="Packages" data-ar="الباقات">Packages</a>
+      <a href="#about" data-en="About" data-ar="عني">About</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="on">EN</button>
+        <button type="button" data-lang="ar">ع</button>
+      </div>
+      <a class="btn btn-accent btn-sm hide-sm" data-wa="nav" href="https://wa.me/213774161251" target="_blank" rel="noopener">
+        <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+      </a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
 </header>
 
-<main id="top">
+<main class="page" id="top">
   <section class="hero">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <p class="eyebrow">
-      <span class="dot"></span>
-      <span data-fr="Disponible pour de nouveaux projets" data-ar="متاح لمشاريع جديدة">Disponible pour de nouveaux projets</span>
-    </p>
-    <h1>
-      <span data-fr="Je construis des choses" data-ar="أبني أشياء">Je construis des choses</span><br>
-      <span class="accent" data-fr="pour le web." data-ar="على الويب.">pour le web.</span>
-    </h1>
-    <p class="lead" data-fr="Développeur. J'écris du code, je publie des idées, et cette page se met à jour toute seule depuis mon GitHub." data-ar="مطوّر. أكتب الشيفرة، أنشر الأفكار، وهذه الصفحة تُحدَّث تلقائياً من حساب GitHub الخاص بي.">
-      Développeur. J'écris du code, je publie des idées, et cette page se met à jour toute seule depuis mon GitHub.
-    </p>
-    <div class="cta-row">
-      <a class="btn primary" href="#work">
-        <i data-lucide="folder-git-2"></i>
-        <span data-fr="Voir les projets" data-ar="شاهد المشاريع">Voir les projets</span>
-      </a>
-      <a class="btn ghost" href="https://github.com/minoU-amine" target="_blank" rel="noopener">
-        <i data-lucide="arrow-up-right"></i>
-        <span data-fr="Mon profil GitHub" data-ar="ملفي على GitHub">Mon profil GitHub</span>
-      </a>
+    <div class="container">
+      <div class="hero-top">
+        <span class="mono" data-en="Amine Bechiri — video editor" data-ar="أمين بشيري — مونتير فيديو">Amine Bechiri — video editor</span>
+        <a class="ig-circle" href="https://www.instagram.com/amine_video_editor/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.4" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div class="hairline"></div>
+
+      <div class="hero-id">
+        <div class="avatar"><img class="avatar-img" src="./images/amine.jpg" alt="Amine Bechiri" width="480" height="480" fetchpriority="high"></div>
+        <div class="hero-id-text">
+          <h1 class="hero-name display">
+            <span data-en="Amine" data-ar="أمين">Amine</span>
+            <span class="accent-line" data-en="Bechiri" data-ar="بشيري">Bechiri</span>
+          </h1>
+          <p class="mono hero-role">
+            <span data-en="Video editor" data-ar="مونتير فيديو">Video editor</span>
+            <span class="sep">—</span>
+            <span data-en="Oman · Algeria · Remote" data-ar="عُمان · الجزائر · عن بُعد">Oman · Algeria · Remote</span>
+          </p>
+        </div>
+        <span class="status hero-status"><span class="dot"></span><span data-en="Available" data-ar="متاح للعمل">Available</span></span>
+      </div>
+
+      <h2 class="hero-headline display">
+        <span data-en="Turn raw footage into videos people" data-ar="أحوّل المواد الخام إلى فيديوهات">Turn raw footage into videos people</span>
+        <span class="hl" data-en="actually watch." data-ar="تُشاهَد حتى النهاية.">actually watch.</span>
+      </h2>
+
+      <p class="hero-statement" data-en="Editing, colour grading, motion design and subtitles for brands, creators and companies. Clean picture, tight pacing, and formats built for every platform." data-ar="مونتاج، تصحيح ألوان، موشن جرافيك وترجمات للمبدعين والعلامات التجارية. صورة نظيفة، إيقاع محكم، وصيغ جاهزة لكل منصّة.">Editing, colour grading, motion design and subtitles for brands, creators and companies. Clean picture, tight pacing, and formats built for every platform.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" data-wa="hero" href="https://wa.me/213774161251" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.6-.8L3 21l1.9-5.1A8.4 8.4 0 0 1 4 11.5a8.4 8.4 0 0 1 8.5-8.4A8.4 8.4 0 0 1 21 11.5Z"/></svg>
+          <span data-en="Talk about your project" data-ar="تحدّث عن مشروعك">Talk about your project</span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#work">
+          <span data-en="See the work" data-ar="شاهد الأعمال">See the work</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-foot">
+        <span class="mono" data-en="Scroll" data-ar="مرّر">Scroll</span>
+        <span class="hero-rule"></span>
+        <span class="mono" data-en="600+ videos edited" data-ar="600+ فيديو تم مونتاجه">600+ videos edited</span>
+      </div>
     </div>
-    <dl class="stats" id="stats">
-      <div><dt data-fr="Dépôts publics" data-ar="مستودعات عامة">Dépôts publics</dt><dd id="statRepos">—</dd></div>
-      <div><dt data-fr="Langages" data-ar="اللغات">Langages</dt><dd id="statLangs">—</dd></div>
-      <div><dt data-fr="Dernière activité" data-ar="آخر نشاط">Dernière activité</dt><dd id="statUpdated">—</dd></div>
-    </dl>
   </section>
 
-  <section class="work" id="work">
-    <div class="section-head">
-      <h2 data-fr="Projets" data-ar="المشاريع">Projets</h2>
-      <p data-fr="Récupérés en direct depuis l'API GitHub — rien à mettre à jour à la main." data-ar="تُجلب مباشرة من واجهة GitHub — لا حاجة لأي تحديث يدوي.">Récupérés en direct depuis l'API GitHub — rien à mettre à jour à la main.</p>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Reels <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Shorts <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">YouTube <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Colour <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Motion <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Subtitles <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Reels <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Shorts <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">YouTube <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Colour <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Motion <span class="marquee-star">✦</span></span>
+      <span class="marquee-item">Subtitles <span class="marquee-star">✦</span></span>
     </div>
-    <div class="grid" id="repoGrid" aria-live="polite">
-      <article class="card skeleton"></article>
-      <article class="card skeleton"></article>
-      <article class="card skeleton"></article>
+  </div>
+
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat" data-reveal>
+        <span class="stat-value display">600+</span>
+        <span class="stat-label" data-en="Videos edited" data-ar="فيديو تم مونتاجه">Videos edited</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat-value display">3+</span>
+        <span class="stat-label" data-en="Years on the timeline" data-ar="سنوات على التايم لاين">Years on the timeline</span>
+      </div>
     </div>
-    <p class="empty" id="emptyState" hidden>
-      <span data-fr="Aucun dépôt public pour l'instant. Le premier arrive bientôt." data-ar="لا توجد مستودعات عامة بعد. الأول قريباً.">Aucun dépôt public pour l'instant. Le premier arrive bientôt.</span>
-    </p>
   </section>
 
-  <section class="about" id="about">
-    <div class="about-copy">
-      <h2 data-fr="À propos" data-ar="نبذة">À propos</h2>
-      <p data-fr="Cette page est un site statique hébergé gratuitement sur GitHub Pages. Aucun serveur, aucune base de données : le navigateur lit l'API publique de GitHub et affiche les dépôts." data-ar="هذه الصفحة موقعٌ ثابت مستضاف مجاناً على GitHub Pages. لا خادم ولا قاعدة بيانات: المتصفح يقرأ واجهة GitHub العامة ويعرض المستودعات.">
-        Cette page est un site statique hébergé gratuitement sur GitHub Pages. Aucun serveur, aucune base de données : le navigateur lit l'API publique de GitHub et affiche les dépôts.
-      </p>
-      <p data-fr="Pour publier un nouveau projet, il suffit d'un <code>git push</code> : la page suit automatiquement." data-ar="لنشر مشروع جديد، يكفي <code>git push</code>: الصفحة تتحدّث تلقائياً.">
-        Pour publier un nouveau projet, il suffit d'un <code>git push</code> : la page suit automatiquement.
-      </p>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="mono eyebrow"><span class="dot"></span><span data-en="Services" data-ar="الخدمات">Services</span></span>
+        <h2 class="sec-title" data-en="From raw footage to a finished cut." data-ar="من المواد الخام إلى فيديو جاهز للنشر.">From raw footage to a finished cut.</h2>
+      </div>
+      <div class="cards-4">
+        <article class="glass card-service" data-reveal>
+          <span class="card-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m16 4 4 4-4 4M8 20l-4-4 4-4M20 8h-9a4 4 0 0 0-4 4v1M4 16h9a4 4 0 0 0 4-4v-1"/></svg></span>
+          <h3 data-en="Video editing" data-ar="مونتاج الفيديو">Video editing</h3>
+          <p data-en="Story-first cuts for reels, shorts and YouTube. Pacing built to hold attention past the first three seconds." data-ar="قصص أولاً ثم القص. إيقاع مصمّم ليحافظ على انتباه المشاهد بعد أول ثلاث ثوانٍ.">Story-first cuts for reels, shorts and YouTube. Pacing built to hold attention past the first three seconds.</p>
+        </article>
+        <article class="glass card-service" data-reveal>
+          <span class="card-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18 4.5 4.5 0 0 1 0-9 4.5 4.5 0 0 0 0-9Z"/></svg></span>
+          <h3 data-en="Colour grading" data-ar="تصحيح الألوان">Colour grading</h3>
+          <p data-en="Consistent, clean looks. Skin tones that stay real and moods that carry the story instead of fighting it." data-ar="لوك نظيف وثابت، ألوان بشرة طبيعية، ومزاج يخدم القصة بدل أن ينافسها.">Consistent, clean looks. Skin tones that stay real and moods that carry the story instead of fighting it.</p>
+        </article>
+        <article class="glass card-service" data-reveal>
+          <span class="card-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg></span>
+          <h3 data-en="Motion & subtitles" data-ar="موشن وترجمات">Motion &amp; subtitles</h3>
+          <p data-en="Kinetic type, captions, hooks and overlays — so the video works even with the sound off." data-ar="تايبوغرافيا متحركة، نسخ، هوكات وطبقات نصية — الفيديو يشتغل حتى بدون صوت.">Kinetic type, captions, hooks and overlays — so the video works even with the sound off.</p>
+        </article>
+        <article class="glass card-service" data-reveal>
+          <span class="card-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m8 4 4 16M16 4l-4 16"/></svg></span>
+          <h3 data-en="Covers & thumbnails" data-ar="أغلفة ومصغرات">Covers &amp; thumbnails</h3>
+          <p data-en="Covers designed to stop the thumb before the video even starts playing." data-ar="أغلفة مصممة لتوقف الإبهام قبل أن يبدأ الفيديو أصلاً.">Covers designed to stop the thumb before the video even starts playing.</p>
+        </article>
+      </div>
     </div>
-    <ul class="pillars">
-      <li><i data-lucide="zap"></i><span data-fr="Statique, rapide, sans dépendances" data-ar="ثابت وسريع بلا اعتماديات">Statique, rapide, sans dépendances</span></li>
-      <li><i data-lucide="git-branch"></i><span data-fr="Déploiement continu à chaque push" data-ar="نشر مستمر عند كل دفعة">Déploiement continu à chaque push</span></li>
-      <li><i data-lucide="shield-check"></i><span data-fr="HTTPS fourni par GitHub" data-ar="HTTPS من GitHub">HTTPS fourni par GitHub</span></li>
-      <li><i data-lucide="languages"></i><span data-fr="Bilingue français / arabe" data-ar="بلغتين: الفرنسية والعربية">Bilingue français / arabe</span></li>
-    </ul>
+  </section>
+
+  <section class="section section-alt" id="work">
+    <div class="container">
+      <div class="sec-head row">
+        <div>
+          <span class="mono eyebrow"><span class="dot"></span><span data-en="Selected work" data-ar="أعمال مختارة">Selected work</span></span>
+          <h2 class="sec-title" data-en="Edits that hold the scroll." data-ar="مونتاج يوقف التمرير.">Edits that hold the scroll.</h2>
+        </div>
+        <p class="sec-note" data-en="Fresh cuts, straight from my Drive — each cover is a real frame from the video." data-ar="أعمال حديثة من الـ Drive مباشرة — كل غلاف إطار حقيقي من الفيديو.">Fresh cuts, straight from my Drive — each cover is a real frame from the video.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab on" data-cat="all" type="button"><span data-en="All" data-ar="الكل">All</span></button>
+        <button class="tab" data-cat="reel" type="button"><span data-en="Reels" data-ar="ريلز">Reels</span></button>
+        <button class="tab" data-cat="ad" type="button"><span data-en="Ads" data-ar="إعلانات">Ads</span></button>
+        <button class="tab" data-cat="edit" type="button"><span data-en="Long form" data-ar="مونتاج طويل">Long form</span></button>
+      </div>
+
+      <div class="work-grid" id="workGrid">
+        <article class="work-card" data-reveal data-cat="ad">
+          <a class="work-poster" href="https://drive.google.com/file/d/1GJVCUgjKzq3uLhdoJZHB-dB4fmnYfikM/view" target="_blank" rel="noopener" aria-label="مفتاح الدول">
+            <img class="poster-img" src="./images/work/w1.jpg" alt="مفتاح الدول" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">01</span>
+            <span class="poster-badge mono">1:33</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">مفتاح الدول</h3>
+            <span class="work-tag mono" data-en="إعلان" data-ar="إعلان">إعلان</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1YFvUtAtWYCDWmUt_GpAeKUS1bF0IAxKS/view" target="_blank" rel="noopener" aria-label="من سيرة ذاتية إلى موقع">
+            <img class="poster-img" src="./images/work/w2.jpg" alt="من سيرة ذاتية إلى موقع" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">02</span>
+            <span class="poster-badge mono">0:33</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">من سيرة ذاتية إلى موقع</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1EsT6lrtTdEQwAMIKFdXNTkdagCAQp7FD/view" target="_blank" rel="noopener" aria-label="مشروع 01">
+            <img class="poster-img" src="./images/work/w3.jpg" alt="مشروع 01" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">03</span>
+            <span class="poster-badge mono">0:58</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">مشروع 01</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1IupCxvcjqQNAEpDdJqlvGTfAuiGNy1iZ/view" target="_blank" rel="noopener" aria-label="مشروع 02">
+            <img class="poster-img" src="./images/work/w4.jpg" alt="مشروع 02" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">04</span>
+            <span class="poster-badge mono">0:47</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">مشروع 02</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1nbKrVHUp6CES4jszt9r1iKav8XTNWe0I/view" target="_blank" rel="noopener" aria-label="دور الطبيب في تنظيم الغذاء والدواء في رمضان">
+            <img class="poster-img" src="./images/work/w5.jpg" alt="دور الطبيب في تنظيم الغذاء والدواء في رمضان" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">05</span>
+            <span class="poster-badge mono">0:54</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">دور الطبيب في تنظيم الغذاء والدواء في رمضان</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/13Px4UUp00nE7A4njtcOQ7bmCgzCZUcx0/view" target="_blank" rel="noopener" aria-label="عمان لنس">
+            <img class="poster-img" src="./images/work/w6.jpg" alt="عمان لنس" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">06</span>
+            <span class="poster-badge mono">0:56</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">عمان لنس</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1tUv73kanEGcUMIsg8fRwztobqSMtVRwq/view" target="_blank" rel="noopener" aria-label="تنمية مهارات مدربي الذكاء الاصطناعي">
+            <img class="poster-img" src="./images/work/w7.jpg" alt="تنمية مهارات مدربي الذكاء الاصطناعي" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">07</span>
+            <span class="poster-badge mono">1:03</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">تنمية مهارات مدربي الذكاء الاصطناعي</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="reel">
+          <a class="work-poster" href="https://drive.google.com/file/d/1hzu3GSEc2hMy9A3vLGL-ze6ZW5csG47I/view" target="_blank" rel="noopener" aria-label="حول للفايبر">
+            <img class="poster-img" src="./images/work/w8.jpg" alt="حول للفايبر" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">08</span>
+            <span class="poster-badge mono">0:46</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">حول للفايبر</h3>
+            <span class="work-tag mono" data-en="ريل" data-ar="ريل">ريل</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="ad">
+          <a class="work-poster" href="https://drive.google.com/file/d/1Lkd7O77Zn_ZKkQ76F5Xbz-o2xUhe8DDs/view" target="_blank" rel="noopener" aria-label="Raven Perfumes">
+            <img class="poster-img" src="./images/work/w9.jpg" alt="Raven Perfumes" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">09</span>
+            <span class="poster-badge mono">1:13</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">Raven Perfumes</h3>
+            <span class="work-tag mono" data-en="إعلان" data-ar="إعلان">إعلان</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="ad">
+          <a class="work-poster" href="https://drive.google.com/file/d/1GgEu35mGoqDKqwNHlOGl2O9hiutszgbT/view" target="_blank" rel="noopener" aria-label="إعلان الدورة en ligne">
+            <img class="poster-img" src="./images/work/w10.jpg" alt="إعلان الدورة en ligne" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">10</span>
+            <span class="poster-badge mono">0:55</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">إعلان الدورة en ligne</h3>
+            <span class="work-tag mono" data-en="إعلان" data-ar="إعلان">إعلان</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="edit">
+          <a class="work-poster" href="https://drive.google.com/file/d/1hSSrIU7QMLU5hCWBfApgu1rVi1PtFHSN/view" target="_blank" rel="noopener" aria-label="عمل 11">
+            <img class="poster-img" src="./images/work/w11.jpg" alt="عمل 11" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">11</span>
+            <span class="poster-badge mono">2:46</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">عمل 11</h3>
+            <span class="work-tag mono" data-en="مونتاج" data-ar="مونتاج">مونتاج</span>
+          </div>
+        </article>
+        <article class="work-card" data-reveal data-cat="edit">
+          <a class="work-poster" href="https://drive.google.com/file/d/1r0kVjjQwpDpgZ47vOec51RaiaVo3WKt3/view" target="_blank" rel="noopener" aria-label="عمل 12">
+            <img class="poster-img" src="./images/work/w12.jpg" alt="عمل 12" loading="lazy" width="900" height="1125">
+            <span class="poster-n mono">12</span>
+            <span class="poster-badge mono">1:21</span>
+            <span class="poster-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span>
+          </a>
+          <div class="work-body">
+            <h3 dir="auto" class="work-name">عمل 12</h3>
+            <span class="work-tag mono" data-en="مونتاج" data-ar="مونتاج">مونتاج</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="work-note">
+        <a class="link-arrow" href="https://www.instagram.com/amine_video_editor/" target="_blank" rel="noopener">
+          <span data-en="See more on Instagram" data-ar="المزيد على إنستغرام">See more on Instagram</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="packages">
+    <div class="container">
+      <div class="sec-head">
+        <span class="mono eyebrow"><span class="dot"></span><span data-en="Packages" data-ar="الباقات">Packages</span></span>
+        <h2 class="sec-title" data-en="Three ways to start." data-ar="ثلاث طرق للبدء.">Three ways to start.</h2>
+        <p class="sec-note" data-en="Prices in Euro (€). Custom scope available on request." data-ar="الأسعار باليورو (€). يمكن تفصيل باقة حسب طلبك.">Prices in Euro (€). Custom scope available on request.</p>
+      </div>
+      <div class="packs">
+        <article class="glass pack" data-reveal>
+          <div class="pack-head">
+            <h3 data-en="Starter" data-ar="باقة البداية">Starter</h3>
+            <span class="mono pack-sub" data-en="Test the water" data-ar="جرّب أولاً">Test the water</span>
+          </div>
+          <div class="pack-price"><span class="display">70</span><span class="pack-cur" data-en="EUR" data-ar="€">EUR</span></div>
+          <p class="pack-desc" data-en="A small first batch to test how I work — no long commitment." data-ar="دفعة صغيرة لتجربة طريقة عملي — بدون التزام طويل.">A small first batch to test how I work — no long commitment.</p>
+          <ul class="pack-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="6 reels — professional editing" data-ar="مونتاج احترافي لـ 6 ريلز">6 reels — professional editing</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="6 covers designed" data-ar="تصميم 6 أغلفة">6 covers designed</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="1 revision round" data-ar="جولة تعديل واحدة">1 revision round</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="Delivery within 72 hours" data-ar="التسليم خلال 72 ساعة">Delivery within 72 hours</span></li>
+          </ul>
+          <a class="btn btn-ghost btn-block" data-wa="pack1" href="https://wa.me/213774161251" target="_blank" rel="noopener"><span data-en="Book on WhatsApp" data-ar="احجز عبر واتساب">Book on WhatsApp</span></a>
+        </article>
+
+        <article class="glass pack" data-reveal>
+          <div class="pack-head">
+            <h3 data-en="Launch" data-ar="باقة الانطلاقة">Launch</h3>
+            <span class="mono pack-sub" data-en="Start strong" data-ar="بداية قوية">Start strong</span>
+          </div>
+          <div class="pack-price"><span class="display">140</span><span class="pack-cur" data-en="EUR" data-ar="€">EUR</span></div>
+          <p class="pack-desc" data-en="For creators who want to publish like a pro from day one." data-ar="لمن يريد أن ينشر باحترافية من أول يوم.">For creators who want to publish like a pro from day one.</p>
+          <ul class="pack-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="15 reels — professional editing" data-ar="مونتاج احترافي لـ 15 ريل">15 reels — professional editing</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="15 covers designed" data-ar="تصميم 15 غلاف احترافي">15 covers designed</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="Insight notes on what works now" data-ar="برقيات بأحدث ما توصل له العلم في صناعة المحتوى">Insight notes on what works now</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="Phone videography course" data-ar="دورة احتراف التصوير بالهاتف">Phone videography course</span></li>
+          </ul>
+          <a class="btn btn-ghost btn-block" data-wa="pack2" href="https://wa.me/213774161251" target="_blank" rel="noopener"><span data-en="Book on WhatsApp" data-ar="احجز عبر واتساب">Book on WhatsApp</span></a>
+        </article>
+
+        <article class="glass pack pack-hi" data-reveal>
+          <span class="pack-badge mono" data-en="Most complete" data-ar="الأكثر تكاملاً">Most complete</span>
+          <div class="pack-head">
+            <h3 data-en="Growth" data-ar="باقة الصعود">Growth</h3>
+            <span class="mono pack-sub" data-en="Build presence" data-ar="حضور ثابت">Build presence</span>
+          </div>
+          <div class="pack-price"><span class="display">259</span><span class="pack-cur" data-en="EUR" data-ar="€">EUR</span></div>
+          <p class="pack-desc" data-en="For creators ready to build a real, consistent presence." data-ar="لمن يريد بناء حضور قوي وثابت.">For creators ready to build a real, consistent presence.</p>
+          <ul class="pack-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="30 reels — professional editing" data-ar="مونتاج احترافي لـ 30 ريل">30 reels — professional editing</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="30 covers designed" data-ar="تصميم 30 غلاف احترافي">30 covers designed</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="4 YouTube videos edited" data-ar="مونتاج 4 مقاطع يوتيوب">4 YouTube videos edited</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="Private strategy consultation" data-ar="استشارة خاصة">Private strategy consultation</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg><span data-en="Tailored growth recommendations" data-ar="توصيات مخصصة للتطوير">Tailored growth recommendations</span></li>
+          </ul>
+          <a class="btn btn-accent btn-block" data-wa="pack3" href="https://wa.me/213774161251" target="_blank" rel="noopener"><span data-en="Book on WhatsApp" data-ar="احجز عبر واتساب">Book on WhatsApp</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="container">
+      <div class="sec-head">
+        <span class="mono eyebrow"><span class="dot"></span><span data-en="Process" data-ar="كيف نعمل">Process</span></span>
+        <h2 class="sec-title" data-en="Simple, from brief to delivery." data-ar="بسيط، من الفكرة إلى التسليم.">Simple, from brief to delivery.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal><span class="step-n mono">01</span><h3 data-en="The brief" data-ar="الفكرة">The brief</h3><p data-en="You send the goal, references and footage link." data-ar="ترسل الهدف والمراجع ورابط المواد.">You send the goal, references and footage link.</p></li>
+        <li class="step" data-reveal><span class="step-n mono">02</span><h3 data-en="The deal" data-ar="الاتفاق">The deal</h3><p data-en="I confirm scope, price and delivery date on WhatsApp." data-ar="أؤكد النطاق والسعر وموعد التسليم على واتساب.">I confirm scope, price and delivery date on WhatsApp.</p></li>
+        <li class="step" data-reveal><span class="step-n mono">03</span><h3 data-en="The edit" data-ar="المونتاج">The edit</h3><p data-en="Cut, grade, sound, subtitles and covers." data-ar="قص، ألوان، صوت، ترجمات وأغلفة.">Cut, grade, sound, subtitles and covers.</p></li>
+        <li class="step" data-reveal><span class="step-n mono">04</span><h3 data-en="The delivery" data-ar="التسليم">The delivery</h3><p data-en="One revision round, then final files ready to post." data-ar="جولة تعديل واحدة، ثم ملفات جاهزة للنشر.">One revision round, then final files ready to post.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span class="mono eyebrow"><span class="dot"></span><span data-en="About" data-ar="عني">About</span></span>
+        <h2 class="sec-title" data-en="Editing is decisions, not effects." data-ar="المونتاج قرارات، لا مؤثرات.">Editing is decisions, not effects.</h2>
+        <p class="about-p" data-en="I'm Amine Bechiri, an independent video editor from Algeria. Three years and 600+ finished videos later, I've cut for an Omani production house, an Algerian studio, and now directly with creators and brands." data-ar="أنا أمين بشيري، مونتير فيديو مستقل من الجزائر. بعد ثلاث سنوات وأكثر من 600 فيديو، عملت مع شركة إنتاج عُمانية واستوديو جزائري، والآن مباشرة مع صنّاع محتوى وعلامات تجارية.">I'm Amine Bechiri, an independent video editor from Algeria. Three years and 600+ finished videos later, I've cut for an Omani production house, an Algerian studio, and now directly with creators and brands.</p>
+        <p class="about-p" data-en="My job is to protect the viewer's attention: remove the noise, keep the feeling, and hand over files that are ready to post — with nothing left for you to fix." data-ar="مهمتي أن أحمي انتباه المشاهد: أحذف الضجيج، أحافظ على الإحساس، وأسلّم ملفات جاهزة للنشر — دون أن يبقى عليك أي تعديل.">My job is to protect the viewer's attention: remove the noise, keep the feeling, and hand over files that are ready to post — with nothing left for you to fix.</p>
+        <dl class="facts">
+          <div class="fact"><dt class="mono" data-en="Based in" data-ar="المقر">Based in</dt><dd data-en="Algeria" data-ar="الجزائر">Algeria</dd></div>
+          <div class="fact"><dt class="mono" data-en="Works with" data-ar="يعمل مع">Works with</dt><dd data-en="Oman · Algeria · Remote" data-ar="عُمان · الجزائر · عن بُعد">Oman · Algeria · Remote</dd></div>
+          <div class="fact"><dt class="mono" data-en="Tools" data-ar="الأدوات">Tools</dt><dd>Premiere Pro · After Effects · DaVinci</dd></div>
+          <div class="fact"><dt class="mono" data-en="Languages" data-ar="اللغات">Languages</dt><dd data-en="Arabic · English · French" data-ar="العربية · الإنجليزية · الفرنسية">Arabic · English · French</dd></div>
+        </dl>
+      </div>
+      <figure class="about-media">
+        <div class="about-frame">
+          <img class="about-img" src="./images/portrait.jpg" alt="Amine Bechiri at his editing desk" width="900" height="1125" loading="lazy">
+          <span class="about-tag mono" data-en="At the desk" data-ar="في المكتب">At the desk</span>
+          <span class="frame-corner tl"></span>
+          <span class="frame-corner br"></span>
+        </div>
+        <figcaption class="mono" data-en="The desk — Algeria" data-ar="المكتب — الجزائر">The desk — Algeria</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner" data-reveal>
+        <span class="mono eyebrow"><span class="dot"></span><span data-en="Contact" data-ar="تواصل">Contact</span></span>
+        <h2 class="contact-title display" data-en="Let's make your next video." data-ar="لنصنع فيديوك القادم.">Let's make your next video.</h2>
+        <p class="contact-text" data-en="Send your idea, footage link or reference on WhatsApp. You get a clear plan, a price and a delivery date — usually within a few hours." data-ar="أرسل فكرتك أو رابط المواد أو مرجعاً على واتساب، وستحصل على خطة واضحة وسعر وموعد تسليم — غالباً في نفس اليوم.">Send your idea, footage link or reference on WhatsApp. You get a clear plan, a price and a delivery date — usually within a few hours.</p>
+        <div class="contact-cta">
+          <a class="btn btn-accent btn-lg" data-wa="contact" href="https://wa.me/213774161251" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.6-.8L3 21l1.9-5.1A8.4 8.4 0 0 1 4 11.5a8.4 8.4 0 0 1 8.5-8.4A8.4 8.4 0 0 1 21 11.5Z"/></svg>
+            <span data-en="Open WhatsApp" data-ar="افتح واتساب">Open WhatsApp</span>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="mailto:aminebechiri@gmail.com">
+            <span data-en="Send an email" data-ar="أرسل إيميل">Send an email</span>
+          </a>
+        </div>
+        <ul class="contact-list">
+          <li><span class="mono" data-en="Phone" data-ar="الهاتف">Phone</span><a href="tel:+213774161251" dir="ltr">+213 774 161 251</a></li>
+          <li><span class="mono" data-en="Email" data-ar="الإيميل">Email</span><a href="mailto:aminebechiri@gmail.com">aminebechiri@gmail.com</a></li>
+          <li><span class="mono" data-en="Instagram" data-ar="إنستغرام">Instagram</span><a href="https://www.instagram.com/amine_video_editor/" target="_blank" rel="noopener">@amine_video_editor</a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="foot-inner">
-    <p>© <span id="year">2026</span> minoU-amine</p>
-    <div class="foot-links">
-      <a href="https://github.com/minoU-amine" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a>
-      <a href="https://github.com/minoU-amine/minou-amine.github.io" target="_blank" rel="noopener"><i data-lucide="code-2"></i> <span data-fr="Code source" data-ar="الشيفرة المصدرية">Code source</span></a>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div>
+        <strong>Amine Bechiri</strong>
+        <span class="mono" data-en="Video editor — Algeria · Oman · Remote" data-ar="مونتير فيديو — الجزائر · عُمان · عن بُعد">Video editor — Algeria · Oman · Remote</span>
+      </div>
+    </div>
+    <div class="footer-right">
+      <span class="mono">© <span id="year">2026</span> — <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span>
+      <a class="to-top mono" href="#top"><span data-en="Back to top" data-ar="إلى الأعلى">Back to top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
     </div>
   </div>
 </footer>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<script src="./assets/app.js"></script>
+<a class="fab" data-wa="fab" href="https://wa.me/213774161251" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.09c-.24.68-1.4 1.3-1.93 1.35-.53.05-1.02.24-3.45-.72-2.93-1.16-4.78-4.2-4.92-4.4-.14-.2-1.17-1.56-1.17-2.98 0-1.42.75-2.12 1.01-2.41.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.48.24.58.81 1.98.88 2.12.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.59.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.29 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.92.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
+  <span data-en="Message me on WhatsApp" data-ar="راسلني على واتساب">Message me on WhatsApp</span>
+</a>
+
+<script src="./app.js"></script>
+<script src="./tracking.js"></script>
 </body>
 </html>
